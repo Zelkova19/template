@@ -52,7 +52,6 @@ jobs:
         run: poetry run mypy . --explicit-package-bases
 
       - name: Run Ruff linter
-        if: ${{ always() }}
         run: poetry run ruff check . --fix
 
       - name: Run Tests with Pytest
